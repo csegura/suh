@@ -1,0 +1,8 @@
+<h1><%= t('title.invitation') %></h1>
+<%= f.label :send_invitation, t('label.send_invitation') %>
+<%= f.check_box :send_invitation, :class => :inline %>
+<%= f.hint t('hint.send_invitation'), :class => :inline %>
+<br/>
+<%= f.label :invitation, t('label.invitation_text'), :class => :block %>
+<%= f.text_area :invitation, :rows => 5, :class => :editor %>
+<%= f.hint t('hint.invitation_text'), :class => :inline %>

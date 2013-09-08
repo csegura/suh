@@ -1,0 +1,5 @@
+<div id="filters">
+  <%= render "shared/filter_by_companies" if is_owner? %>
+  <%= render "shared/filter_by_timetrack_status" %>
+  <%= render "shared/filter_by_months", :months => @timetracks_months %>
+</div>

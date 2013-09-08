@@ -1,0 +1,13 @@
+<h2>
+  <%= t('label.filter_company') %>
+</h2>
+<ul>
+  <li>
+    <%= collection_select(:filter,
+                          :company,
+                          current_company.companies.all,
+                          :id,
+                          :name,
+                          {:prompt => t('label.all') }) %>
+  </li>
+</ul>

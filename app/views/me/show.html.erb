@@ -1,0 +1,13 @@
+<% content_for :sidebar do %>
+    <h1><%= t("me.account") %></h1>
+    <ul>
+      <li><%= link_to t("me.edit_account"), edit_me_account_path %></li>
+      <li><%= link_to t("me.edit_profile"), edit_me_profile_path %></li>
+    </ul>
+<% end %>
+
+<h1><%= current_user.full_name %></h1>
+
+<h4><%= t("me.accesses") %></h4>
+
+<%= render "accesses" %>

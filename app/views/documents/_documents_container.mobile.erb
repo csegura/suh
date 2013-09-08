@@ -1,0 +1,18 @@
+<% if documents.length > 0 %>
+  <div class="documents_container" data-role="collapsible" data-collapsed="true">
+    <%= title 3, t('document.title') %>
+    <p>
+    <ul data-role="listview" data-split-theme="e"  >
+      <% documents.each do |document| %>
+        <%= content_tag_for :li, document do %>
+          <%= link_to document_path(document) do %>
+            <h3><%= document.asset_file_name %></h3>
+            <p><%= nice_size document.asset_file_size %></p>
+            <%= document_icon document, :format => :medium %>
+          <% end %>
+        <% end %>
+      <% end %>
+    </ul>
+    </p>
+  </div>
+<% end %>

@@ -1,0 +1,13 @@
+<nav>
+  <ul id="menu">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Main</a></li>
+    <li><a href="#">Navigation</a></li>
+    <li><a href="#">Here</a></li>
+  </ul>
+  <ul id="session">
+    <li>Logged in as <span><%= @current_user.email %></span></li>
+    <li><a href="#">My Account</a></li>
+    <li><%= link_to t("session.logout"), log_out_path %></li>
+</ul>
+</nav>

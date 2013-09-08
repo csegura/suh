@@ -1,0 +1,21 @@
+<% content_for :sidebar do %>
+    <%= link_back :back %>
+    <div id="sidebar_container">
+      <%= render "sidebar_show" %>
+    </div>
+<% end %>
+
+<%= page_title @issue.title %>
+<%= page_head %>
+<%= page_body @issue.body %>
+
+<%= render "documents/documents_container", :documents => @issue.documents %>
+<%= render "comments/form", :object => @issue %>
+<%= render "timetracks/form", :object => @issue %>
+
+<div id="timetracks_container">
+<%= render "timetracks/timetracks_container", :timetracks => @timetracks, :counter => @timetracks_count %>
+</div>
+<div id="comments_container">
+<%= render "comments/comments", :comments => @comments, :counter => @comments_count %>
+</div>

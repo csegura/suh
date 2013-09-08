@@ -1,0 +1,18 @@
+<div id="issues">
+  <%= will_paginate @issues, :remote => true %>
+  <table class="und">
+    <tbody>
+    <% group = GroupByDate.new %>
+    <% @issues.each do |issue| %>
+        <%= date_group group, issue.created_at, 5 %>
+        <%= content_tag_for :tr, issue do %>
+            <td class="what"><%= issue_status issue %></td>
+            <td class="date"><%= nice_date issue.created_at, :hour  %></td>
+            <td class="item"><%= link_to issue.title, issue_path(issue) %></td>
+            <td class="name"><%= nice_access issue.access %></td>
+            <td class="name"><span class="counter"><%= issue.comments_count %></span></td>
+        <% end %>
+    <% end %>
+    </tbody>
+  </table>
+</div>

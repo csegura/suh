@@ -1,0 +1,12 @@
+<footer>
+  <p class="small"><%= "#{Time.now-@start_time} secs." %><p>
+  <p>(c) 2011 IdeSeg</p>
+
+  <p>
+    <% unless Rails.env.production? %>
+        <%#= debug params %>
+        <%#= debug session %>
+        <%#= debug flash %>
+    <% end %>
+  </p>
+</footer>

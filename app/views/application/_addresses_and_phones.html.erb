@@ -1,0 +1,17 @@
+<h1><%= t('address.title') %></h1>
+
+<div id="addresses">
+  <%= f.simple_fields_for :addresses do |p| %>
+      <%= render 'application/address_fields', :f => p %>
+  <% end %>
+  <%= link_to_add_association t('address.add'), f, :addresses %>
+</div>
+
+<h1><%= t('phone.title') %></h1>
+
+<div id="phones">
+  <%= f.simple_fields_for :phones do |p| %>
+      <%= render 'application/phone_fields', :f => p %>
+  <% end %>
+  <%= link_to_add_association t('phone.add'), f, :phones %>
+</div>

@@ -1,0 +1,14 @@
+<% content_for :sidebar do %>
+    <%= link_back me_path %>
+    <p></p>
+    <div class="contextual" >
+    </div>
+    <h1><%= t('user.title') %></h1>
+    <p>
+      <%= t('help.user_account') %>
+    </p>
+<% end %>
+
+<h1><%= t('user.edit') %> - <%= current_user.full_name %></h1>
+
+<%= render 'form' %>

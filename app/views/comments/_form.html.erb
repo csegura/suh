@@ -1,0 +1,18 @@
+<div id="new_comment_form" class="hidden_form">
+  <h4>
+    <%= t('comment.new') %>
+  </h4>
+
+  <%= simple_form_for [object, Comment.new], :html => { :multipart => true}, :remote => true do |f| %>
+      <%= f.error_notification %>
+
+      <div class="inputs">
+        <%= f.input_field :comment, :class => "editor_full", :rows => "8" %>
+      </div>
+
+      <%= render "application/sub_documents", :f => f %>
+
+      <%= submit_or_cancel f, "new_comment_form", :class => :full %>
+
+  <% end %>
+</div>

@@ -1,0 +1,6 @@
+<div id="filters">
+  <%= render "shared/filter_by_read" %>
+  <%= render "shared/filter_by_companies" if is_owner? %>
+  <%= render "shared/filter_by_activities" %>
+  <%= render "shared/filter_by_months", :months => @activities_months %>
+</div>

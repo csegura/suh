@@ -1,0 +1,116 @@
+<% content_for :sidebar do %>
+    <div class="section">
+      <div class="contextual">Sidebar context</div>
+
+      <h3>Side bar section</h3>
+
+      <p>Could be content like this, or it could be a list of links, like the following:</p>
+      <ul>
+        <li><a href="#">Link one</a></li>
+        <li><a href="#">Link two</a></li>
+        <li><a href="#">Link three</a></li>
+
+        <li><a href="#">Link four</a></li>
+      </ul>
+    </div>
+
+    <button class="big pill positive button">
+      <span class="plus icon"></span>add item
+    </button>
+
+    <p>
+      <a href="#" class="button pill left">butoncito</a>
+      <a href="#" class="button pill middle">butoncito</a>
+      <a href="#" class="button pill middle">butoncito</a>
+      <a href="#" class="button pill right">butoncito</a>
+    </p>
+
+    <a href="#" class="button">
+      <span class="plus icon"></span>Button
+    </a>
+
+    <p><input name="submit" type="submit" class="button" value="Even style form buttons"/></p>
+
+    <p><input name="submit" type="submit" class="button" value="Form Button with Icon"/></p>
+<% end %>
+
+<div class="contextual">Contextual stuff here</div>
+<h3>&lt;h3&gt;Page title&lt;/h3&gt;</h3>
+
+<h4>&lt;h4&gt;Heading 4: Sub title&lt;/h4&gt;</h4>
+<p>&lt;p&gt;This is the paragraph, first <strong>strong</strong>, then <em>em</em> and now &ndash; here comes the
+  lorem...&lt;/p&gt;</p>
+
+<%= yield %>
+
+<p>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lorem ligula, congue sed adipiscing non,
+  fringilla at orci. Nullam a turpis vitae justo imperdiet volutpat sed nec nisl. In hac habitasse platea dictumst.
+  Nulla gravida sagittis purus sit amet sagittis. Nam ipsum tortor, porttitor sit amet adipiscing ut, congue sed arcu.
+  Nulla egestas felis vitae nisl convallis viverra condimentum est vehicula. In a lectus libero. Proin aliquet posuere
+  ultrices. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque
+  hendrerit pharetra lobortis. Sed ullamcorper ipsum convallis orci hendrerit interdum. Integer semper iaculis suscipit.
+  Integer eget hendrerit diam. Nullam eleifend orci arcu, sit amet tincidunt dui. Nullam at diam vitae justo aliquam
+  rutrum. Sed tellus velit, mollis non euismod quis, ornare eu orci. Nullam ut nisl sit amet felis posuere hendrerit et
+  ut leo. Sed sit amet dui libero. In consectetur lobortis vehicula.&lt;/p&gt;</p>
+<h5>&lt;h5&gt;H5: lower title&lt;/h5&gt;</h5>
+<table>
+  <thead>
+  <tr>
+    <th>Heading &lt;th /&gt;</th>
+    <th>Heading</th>
+    <th>Heading</th>
+  </tr>
+
+  </thead>
+  <tbody>
+  <tr>
+    <td>row1, col1 &lt;td /&gt;</td>
+    <td>row1, col2</td>
+    <td>row1, col3</td>
+  </tr>
+  <tr>
+    <td>row2, col1</td>
+    <td>row2, col2</td>
+    <td>row2, col3</td>
+  </tr>
+  <tr>
+    <td>row3, col1</td>
+    <td>row3, col2</td>
+    <td>row3, col3</td>
+  </tr>
+
+  </tbody>
+  <tfoot>
+  <tr>
+    <td>tfoot, cell</td>
+    <td>tfoot, cell</td>
+    <td>tfoot, cell</td>
+  </tr>
+  </tfoot>
+</table>
+<h5>Unordered List &lt;ul /&gt;</h5>
+
+<ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+<h5>Ordered List &lt;ol /&gt;</h5>
+
+<ol>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ol>
+<h5>Definition List &lt;dl /&gt;</h5>
+
+<dl>
+  <dt>Item 1</dt>
+  <dd>Definition 1</dd>
+  <dt>Item 2</dt>
+  <dd>Definition 2</dd>
+  <dt>Item 3</dt>
+
+  <dd>Definition 3</dd>
+</dl>
+<p>Anything I've missed?</p>

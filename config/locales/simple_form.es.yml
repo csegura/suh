@@ -1,0 +1,35 @@
+es:
+  simple_form:
+    "yes": 'Si'
+    "no": 'No'
+    required:
+      text: 'requerido'
+      mark: '*'
+      # You can uncomment the line below if you need to overwrite the whole required html.
+      # When using html, text and mark won't be used.
+      # html: '<abbr title="required">*</abbr>'
+    error_notification:
+      default_message: "Se han detectado errores, por favor compruebe los datos."
+    xlabels:
+      addresses:
+        note: "Descripción"
+        line1: ""
+        line2: ""
+        city: "Ciudad"
+        state: "Provincia"
+        code: "Código Postal"
+      name: "Nombre"
+      user:
+        first_name: "Nombre"
+        last_name: "Apellido"
+        password: "Password"
+        password_confirmation: "Confirmación"
+      avatar:
+        image: "Imagen"
+      user_profile:
+        company:    "Empresa"
+        title:      "Cargo"
+        alt_email:  "Otro Email"
+        phone:      "Teléfono"
+        mobile:     "Móvil"
+        notes:      "Notas"

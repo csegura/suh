@@ -1,0 +1,13 @@
+<% @commentable.comments.each do |comment| %>
+    <h5>
+      <%= comment.access_full_name %>
+      <span class="date">
+        <%= nice_time_ago comment.created_at %> -
+        <%= nice_date comment.created_at %>
+      </span>
+    </h5>
+    <p>
+      <%= comment.comment.html_safe %>
+    </p>
+    <hr/>
+<% end %>

@@ -1,0 +1,6 @@
+<div id="documents" class="separate">
+  <%= f.simple_fields_for :documents do |p| %>
+      <%= render "application/document_fields", :f => p %>
+  <% end %>
+  <%= link_to_add_association t('document.add'), f, :documents %>
+</div>

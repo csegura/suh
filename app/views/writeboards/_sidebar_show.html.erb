@@ -1,0 +1,8 @@
+<% if current_access.is_owner? %>
+  <p>
+    <%= link_to t('writeboard.edit'), edit_writeboard_path(@writeboard.id), :class => :red %>
+  </p>
+<% end %>
+
+<%= render "version_details" %>
+

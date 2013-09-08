@@ -1,0 +1,18 @@
+<% if issue && issue.is_a?(Issue) %>
+    <h4 class="issue"><%= issue.activity %></h4>
+    <div class="head">
+      <%= head_label :by, nice_access(issue.access, :company => true) %>
+      <%= head_label :status, issue_status(issue) %>
+      <%= head_label :created_at, nice_date(issue.created_at, :nice, :time_ago => true) %>
+      <% unless issue.open? %>
+          <%= head_label :closed, nice_date(issue.closed_at, :nice, :time_ago => true) %>
+          <%= head_label :closed_by, nice_user(issue.closed_by_user) %>
+      <% end %>
+    </div>
+    <p>
+      <%= nice_text issue.body %>
+    </p>
+    <p>
+      <%= link_to_resource(issue) %>
+    </p>
+<% end %>

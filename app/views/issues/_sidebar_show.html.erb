@@ -1,0 +1,40 @@
+<% if @issue.open? %>
+    <h1><%= t('comment.new') %></h1>
+    <p>
+      <%= link_to_function t('comment.new'), 'app_showd("new_comment_form");' %>
+    </p>
+
+    <h1><%= t('issue.close_it') %></h1>
+    <p>
+      <%= link_to t('issue.close_issue'), close_issue_path(@issue), :remote => true, :class => :red %>
+    </p>
+<% end %>
+
+<% if current_access.is_owner? %>
+    <h1><%= t('label.admin_options') %></h1>
+    <p>
+      <%= link_to_function t('timetrack.new'), 'app_showd("new_timetrack_form");' %>
+    </p>
+    <% if @comments_in_trash_count > 0 %>
+        <div>
+          <div id="toogle_trash" class="contextual">
+            <%= link_toogle_trash %>
+          </div>
+          <h2><%= t('label.trash') %> (<%= @comments_in_trash_count %>)</h2>
+
+          <p></p>
+        </div>
+    <% end %>
+    <% if @issue.close? %>
+        <div>
+          <div id="reopen" class="contextual">
+            <%= link_to t('issue.reopen'), reopen_issue_path(@issue), :remote => true %>
+          </div>
+          <h2><%= t('issue.reopen') %></h2>
+
+          <p></p>
+        </div>
+    <% end %>
+<% end %>
+
+

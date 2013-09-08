@@ -1,0 +1,134 @@
+h3 {
+    span.activity_issue {
+    color: #616382;
+}
+span.activity_comment {
+    color: #99cc00;
+}
+span.activity_document {
+    color: #2288AA;
+}
+}
+
+p.date {
+    color: #1b4376;
+}
+
+@mixin rounded {
+  border: 1px solid #dddddd;
+  border-radius:10px;
+  -webkit-border-radius:10px;
+  -moz-border-radius:10px;
+  -o-border-radius:10px;
+}
+@mixin content {
+  margin: 5px;
+  padding: 5px;
+  background-color: #fff;
+}
+
+.page_head {
+  @include rounded;
+  @include content;
+  img {
+    float: right;
+  }
+  p {
+    font-size: 0.8em;
+    -webkit-margin-before: 0.5em;
+    -webkit-margin-after: 0.5em;
+    -webkit-margin-start: 0.5px;
+    -webkit-margin-end: 0.5px;
+  }
+}
+
+.page_body {
+  @include rounded;
+  @include content;
+   p {
+    font-size: 0.8em;
+    -webkit-margin-before: 0.5em;
+    -webkit-margin-after: 0.5em;
+    -webkit-margin-start: 0.5px;
+    -webkit-margin-end: 0.5px;
+  }
+}
+
+.label {
+  width: 55px;
+  //float: left;
+  //text-align: right;
+  font-size: 1em;
+  color: #999;
+  margin-right: 5px;
+  display: table-row;
+  font-weight: bold;
+}
+
+.documents_container {
+  margin-left: 20px;
+  margin-right: 20px;
+  @include rounded;
+  background-color: #fff;
+  li {
+    margin-right: 0px;
+  }
+  p {
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+  }
+  .ui-collapsible-content {
+    padding: 0px;
+  }
+}
+
+.comments {
+  margin-left: 10px;
+  margin-right: 10px;
+  li {
+    margin-right: 0px;
+  }
+  .ui-collapsible-content {
+    padding: 0px;
+    font-size: 0.8em;
+  }
+  .ui-collapsible-heading {
+    font-size: 12px;
+  }
+}
+
+.comment {
+  @include rounded;
+  font-size: 0.8em;
+  background-color: #fff;
+  margin-bottom: 10px;
+  img.avatar {
+    float: left;
+    padding:5px;
+  }
+  h5 {
+    font-size: 0.8em;
+    -webkit-margin-before: 5px;
+    -webkit-margin-after: 2px;
+    -webkit-margin-start: 10px;
+    -webkit-margin-end: 10px;
+  }
+  h6 {
+    font-size: 0.8em;
+    -webkit-margin-before: 2px;
+    -webkit-margin-after: 2px;
+    -webkit-margin-start: 10px;
+    -webkit-margin-end: 10px;
+    font-size: 0.8em;
+    color: #666;
+  }
+  p {
+    -webkit-margin-before: 2px;
+    -webkit-margin-after: 2px;
+    font-size: 0.9em;
+    padding: 2px;
+  }
+  .documents_container {
+    margin-left: 100px;
+  }
+}

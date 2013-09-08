@@ -1,0 +1,8 @@
+<% if can_confirm? @timetrack %>
+    <h1><%= t('timetrack.confirm') %></h1>
+    <p>
+      <%= link_to t('timetrack.confirm'), confirm_timetrack_path(@timetrack), :remote => true, :class => :red %>
+    </p>
+<% end %>
+
+

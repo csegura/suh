@@ -1,0 +1,282 @@
+es:
+  time:
+    formats:
+      sort: "%a %d %b %y"
+      nice: "%a, %d %b %Y %R"
+      long: "%A, %d %B del %Y"
+      full: "%A, %d de %B del %Y a las %R"
+      hour: "%l:%M %P"
+      month: "%B %Y"
+  flash:
+    actions:
+      create:
+        notice: "{{resource_name}} creada"
+      update:
+        notice: "{resource_name} actualizada"
+      destroy:
+        notice: "{{resource_name}} eliminada"
+        alert: "{{resource_name}} no ha podido eliminarse"
+  will_paginate:
+    previous_label: "&#8592; anterior"
+    next_label: "siguiente &#8594;"
+    page_gap: "..."
+  activerecord:
+    models:
+      company: "Empresa"
+      user: "Usuario"
+      access: "Acceso"
+      user_profile: "Perfil"
+      category: "categoría"
+      issue: "incidencia"
+      comment: "comentario"
+      timetrack: "registro"
+
+    attributes:
+      company:
+        name: "Empresa"
+        avatar: "Logo"
+      avatar:
+        image: "Imagén"
+      address:
+        name:  "Descripción"
+        line1: "Dirección"
+        line2: ""
+        city: "Ciudad"
+        code: "Cód. Postal"
+        state: "Provincia"
+        country: "País"
+      category:
+        name: "Categoría"
+      issues:
+        title: "Título"
+        body: "Descripción"
+      access:
+        first_name: "Nombre"
+        last_name: "Apellidos"
+        roles: "Acceso"
+      user:
+        email: "e-mail"
+        first_name: "Nombre"
+        last_name: "Apellidos"
+        password: "Password"
+        password_confirmation: "Confirmación"
+      user_profile:
+        company: "Empresa"
+        title: "Cargo"
+        alt_email: "Otro Email"
+      comments:
+        text: "comentario"
+      timetrack:
+        billable: "Facturable"
+        tracked_at: "Registrado"
+        minutes: "Minutos"
+
+  session:  # sessions_controller & password_resets_controller
+    # Login::SessionsController
+    invalid_login: "Email o contraseña incorrectas."
+    # views
+    session_new_title: "Bienvenido a %{name}"
+    email: "Su dirección de correo"
+    password: "Contraseña"
+    login: "Entrada"
+    logout: "Salir"
+    remember: "recordarme"
+    forgot_password: "Olvidé la contraseña."
+    help: "Ayuda"
+    # Login::PasswordController
+    sent_instructions: "Se le han enviado intrucciones para restablecer su contraseña"
+    token_expired: "Ha expirado el tiempo para restablecer la contraseña"
+    password_reset: "Su contraseña se ha restablecido"
+    # views
+    password_resets_title: "¿Olvido su contraseña?"
+    remember_password: "Enviarme instrucciones"
+    remember_password_help: "Le enviaremos un mensaje con instrucciones para restablecer su contraseña."
+    update_password: "Cambiar contraseña"
+
+    back: "Volver"
+
+    my_account: "Mi cuenta"
+    password_first: "Bienvenido. Seleccione el password que usará para acceder al sistema."
+    password_new: "Introduzca su nueva contraseña de acceso."
+
+    email_password_reset: "Restablecimiento de contraseña"
+    email_invitation: "Invitación a entrar en nuestra extranet"
+  tabs:
+    admin: "Administrar"
+    dashboard: "Actividades"
+    issues: "Incidencias"
+    documents: "Archivos"
+    timetracks: "Tiempo"
+
+    writeboards: "Documentos"
+  action:
+    admin: "_Administrar"
+    edit: "Editar"
+    back: "Volver"
+    delete: "eliminar"
+    delete_icon: "&nbsp;"
+
+  me:
+    account: "Cuenta de usuario"
+    edit_account:  "Editar cuenta de usuario"
+    edit_profile:  "Editar perfil de usuario"
+    accesses: "Tiene accesso a las siguientes empresas"
+    access: "Acceder"
+
+  label:
+    cancel: "cancelar"
+    main_data: "Datos principales"
+    password: "Contraseña"
+    notes: "Notas"
+    send_invitation: "Enviar invitación"
+    invitation_text: "Texto personalizado"
+    addresses: "Direcciones"
+    logo: "Logotipo"
+    delete: "_Eliminar"
+    sure: "¿Está Ud. seguro?"
+    by: "Creado por"
+    status: "Estado"
+    created_at: "Creado el"
+    closed_by: "Cerrada por"
+    closed: "Cerrada el"
+    filter_activity: "Filtrar por actividad"
+    filter_month: "Filtrar por mes"
+    filter_status: "Filtrar por estado"
+    admin_options: "Opciones especiales"
+    hide: "Ocultar"
+    show: "Mostrar"
+    trash: "Papelera"
+    all: "Todas"
+    alls: "Todos"
+    filter_company: "Filtrar por empresa"
+    access_denied: "Accesso denegado."
+    preview: "Previsualizar"
+    filter_category: "Filtrar por categoría"
+    uploaded_at: "Cargado el"
+    size: "Tamaño"
+    title: "Título"
+    description: "Descripción"
+    linked: "Enlazado"
+    category: "Categoría"
+    nolabel: ""
+    read: "Leidas"
+    unread: "No leidas"
+    filter_read: "Mostrar"
+    readall: "Marcar todo como leido"
+    tracked_at: "Fecha"
+    confirmed: "Confirmado"
+    confirmed_at: "Confirmado"
+    confirmed_by: "por"
+    time: "Tiempo"
+    user: "Usuario"
+    hours: "Horas"
+    go_to: "Enlace"
+    nodata: "sin datos"
+    options: "Opciones"
+  user:
+    new: "Nuevo usuario"
+    updated: "cuenta actualizada"
+    edit: "Editar cuenta de usuario"
+    title: "Cuenta de usuario"
+  user_profile:
+    title: "Perfil de usuario"
+    edit: "Editar perfil de usuario"
+    updated: "perfil actualizado"
+  company:
+    new: "Nueva empresa"
+    edit: "Editar empresa"
+    go: "Acceder"
+    updated: "se modificó la empresa"
+    delete: "Eliminar empresa"
+    title: "Empresa"
+  access:
+    title: "Accesos"
+    new: "Nuevo acceso"
+    edit: "Editar"
+    roles: "Acceso"
+    added: "acceso añadido"
+    updated: "acceso actualizado"
+    access: "Acceso"
+    email: "Email"
+    first_name: "Nombre"
+    last_name: "Apellido"
+    activate: "Activar acceso"
+    deactivate: "Desactivar acceso"
+    delete: "Eliminar acceso"
+    invitation_sent: "Se envió la invitación."
+    resent_invitation: "Reenviar Invitación"
+    resend_now: "Reenviar ahora"
+  address:
+    title: "Direcciones"
+    add: "Añadir dirección"
+  phone:
+    title: "Teléfonos"
+    add: "Añadir teléfono"
+    names:
+      office: "Trabajo"
+      home: "Casa"
+      fax:  "Fax"
+      mobile: "Móvil"
+  title:
+    roles: "Acceso"
+    invitation: "Invitación"
+    main_data: "Datos Principales"
+    access_activation: "Activación"
+  role:
+    user: "Usuario"
+    admin: "Administrador"
+    owner: "Propietario"
+  category:
+    title: "Categorias"
+    no_data: "No hay ninguna categoría definida"
+  issue:
+    title: "Incidencias"
+    new: "Nueva incidencia"
+    added: "se agregó la incidencia"
+    open: "Abierta"
+    close_it: "Cerrar la incidencia"
+    close: "Cerrada"
+    reopen: "Reabrir"
+    all: "Todas"
+    close_issue: "Cerrar"
+  comment:
+    new: "Nuevo comentario"
+    added: "se agregó el comentario"
+    title: "Comentarios"
+    no_data: "No hay comentarios"
+    not_found: "No se encontro el comentario"
+  activity:
+    title: "Actividades"
+    action:
+      opened: "abierta por"
+      closed: "cerrada por"
+      created: "creado por"
+      deleted: "borrado por"
+      updated: "actualizado por"
+      commented: "comentado por"
+      reopen: "reabierta por"
+      uploaded: "cargado por"
+    activity:
+      all: "todas"
+      issue: "incidencia"
+      comment: "comentario"
+      document: "documento"
+      timetrack: "registro"
+
+  document:
+    title: "Archivos"
+    new: "Nuevo archivo"
+    add: "Añadir documento"
+
+  timetrack:
+    title: "Registros de tiempo"
+    new: "Nuevo registro de tiempo"
+    added: "se agrego el registro"
+    not_found: "No se encontro el registro de tiempo"
+    confirmed: "Confirmado"
+    unconfirmed: "Sin confirmar"
+    confirm: "Confirmar"
+  writeboard:
+    title: "Documentos colaborativos"
+    new: "Nuevo documento"
+    edit: "Editar documento"

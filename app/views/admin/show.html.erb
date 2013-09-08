@@ -1,0 +1,43 @@
+<% content_for :sidebar do %>
+    <h1><%= t('label.options') %></h1>
+    <p>
+    <%= link_to t('category.title'), admin_categories_path %>
+    </p>
+<% end %>
+
+<div class="contextual">
+  <%= link_to t('company.new'), new_admin_company_path %>
+</div>
+<h1><%= t('access.title') %></h1>
+
+<% @companies.each do |company| %>
+    <h4>
+      <%= company.name %>
+      <span class="context">
+         <%= link_to t('company.edit'), edit_admin_company_path(company) %> |
+        <%= link_to t('access.new'), new_admin_company_access_path(company) %>
+      </span>
+    </h4>
+    <%= content_tag :div, :class => :container do %>
+        <% company.accesses.each do |access| %>
+            <%= content_tag_for(:div, access, :class=>:card) do %>
+                <div class="user">
+                  <%= avatar_for access.user %>
+                  <%= role_label access %>
+                </div>
+                <div class="info">
+                  <h3><%= access.user_full_name %></h3>
+                  <%= role_label access %>
+                  <p>
+                    company                   <%= access.user_email %><br/>
+                    <%= nice_time_ago access.user_last_login_at %><br/>
+                    <%= link_to t('access.edit'), edit_admin_company_access_path(company, access) %> |
+                    <%= link_to "Perfil", edit_me_account_path(access.user.id) %>
+                  </p>
+                </div>
+            <% end %>
+        <% end %>
+    <% end %>
+
+<% end %>
+--

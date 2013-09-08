@@ -1,0 +1,15 @@
+<% content_for :sidebar do %>
+    <h1><%= t('issue.title') %></h1>
+    <p>
+    <%= link_to t('issue.new'), new_issue_path %>
+    </p>
+    <%= render "filters" %>
+<% end %>
+
+<div class="contextual">
+  <%= link_to "calendar", calendar_dashboard_path %>
+</div>
+
+<h1><%= t('activity.title') %></h1>
+
+<%= render "activities/activities" %>

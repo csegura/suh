@@ -1,0 +1,13 @@
+<h2>
+  <%= t('label.filter_month') %>
+</h2>
+<ul>
+  <li>
+    <%= link_filter t('label.alls'), :month => nil, :page => 1, :default => true %>
+  </li>
+  <% months.collect do |month, activity| %>
+      <li>
+        <%= link_filter "#{l(month, :format => :month)}", :month => month, :page => 1 %>
+      </li>
+  <% end %>
+</ul>

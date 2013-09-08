@@ -1,0 +1,5 @@
+<ul id="session">
+  <li class="user"><span><%= nice_access current_access, :company => true %></span></li>
+  <li><%= link_to t("session.my_account"), me_path %></li>
+  <li><%= link_to t("session.logout"), log_out_path %></li>
+</ul>

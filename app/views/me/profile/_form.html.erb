@@ -1,0 +1,17 @@
+<%= simple_form_for [@profile], :url => me_profile_path do |f| %>
+    <%= f.error_notification %>
+
+    <div class="inputs">
+
+      <h1><%= t('label.main_data') %></h1>
+      <%= f.input :company %>
+      <%= f.input :title %>
+      <%= f.input :alt_email %>
+
+      <%= render 'application/addresses_and_phones', :f => f %>
+      <p class="separator"></p>
+
+    </div>
+
+    <%= submit_or_cancel f, me_path %>
+<% end %>

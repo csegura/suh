@@ -1,0 +1,17 @@
+<div class="contextual" id="read_all">
+   <%= link_to t('label.readall'), read_all_dashboard_path, :remote => true, :class => :red %>
+</div>
+<h2>
+  <%= t('label.filter_read') %>
+</h2>
+<ul>
+  <li>
+    <%= link_filter t('label.all'), :read => nil, :page => 1, :default => true %>
+  </li>
+  <li>
+    <%= link_filter t('label.read'), :read => "yes", :page => 1 %>
+  </li>
+  <li>
+    <%= link_filter t('label.unread'), :read => "no", :page => 1 %>
+  </li>
+</ul>

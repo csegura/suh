@@ -1,0 +1,2 @@
+$('#comments_container').html("<%= ejs(render "comments/comments", :comments => @comments, :counter => @comments_count); %>");
+$('#toogle_trash').html("<%= ejs(link_toogle_trash); %>");

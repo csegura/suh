@@ -1,0 +1,8 @@
+<div class="actions <%= style.to_s %>">
+    <%= f.button :submit %>
+    <% if remote %>
+        <%= link_to_function t('label.cancel'), path, :class => "button-cancel" %>
+    <% else %>
+        <%= link_to t('label.cancel'), path, :class => "button-cancel" %>
+    <% end %>
+</div>

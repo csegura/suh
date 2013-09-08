@@ -1,0 +1,13 @@
+<h2>
+  <%= t('label.filter_status') %>
+</h2>
+<ul>
+  <li>
+    <%= link_filter t('label.all'), :status => nil, :page => 1, :default => true %>
+  </li>
+  <% %w(open close).each do |status| %>
+      <li>
+        <%= link_filter "#{t('issue.'+status)}", :status => status, :page => 1 %>
+      </li>
+  <% end %>
+</ul>

@@ -1,0 +1,12 @@
+<% content_for :sidebar do %>
+  <%= link_back admin_path %>
+  <h1><%= t('access.new') %></h1>
+  <p>
+    <%= t('help.new_access') %>
+  </p>
+<% end %>
+
+<h1><%= @company.name %> - <%= t('user.new') %></h1>
+
+<%= render 'form' %>
+

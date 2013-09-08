@@ -1,0 +1,15 @@
+<%= will_paginate @activities, :remote => true, :renderer => WillPaginateJqueryMobileRenderer %>
+
+<% group_by_date(@activities, :created_at).each do |date, activities| %>
+    <%= mobile_group_header_date date %>
+    <% activities.each do |activity| %>
+        <%= content_tag_for :li, activity do %>
+            <a href="<%= mobile_activity_purl(activity) %>">
+                <h3><%= activity_label activity %></h3>
+                <p><strong><%= activity_action activity %> <%= nice_access activity.access %></strong></p>
+                <p><%= activity.info %></p>
+                <p class="ui-li-aside date"><%= nice_date activity.created_at, :hour %></p>
+            </a>
+        <% end %>
+    <% end %>
+<% end %>

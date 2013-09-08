@@ -1,0 +1,7 @@
+<%= mobile_page_title @document.asset_file_name %>
+<%= page_head %>
+<%= page_body @document.comment %>
+
+<div id="comments_container">
+<%= render "comments/comments", :comments => @comments, :counter => @comments_count %>
+</div>

@@ -1,0 +1,32 @@
+<% content_for :sidebar do %>
+    <%= link_back admin_path %>
+    <p></p>
+    <div class="contextual" id="activation">
+      <%= link_to_access_activation @access %>
+    </div>
+    <h1><%= t('access.access') %></h1>
+    <p>
+      <%= t('help.access_activation') %>
+    </p>
+    <div class="contextual" >
+      <%= link_to t('label.delete'), admin_company_access_path(@company.id,@access.id),
+                  :confirm => t('label.sure'), :method => :delete %>
+    </div>
+    <h1><%= t('access.delete') %></h1>
+    <p>
+      <%= t('help.access_delete') %>
+    </p>
+    <div class="contextual" >
+      <%= link_to_access_resend_invitation @access %>
+    </div>
+    <h1><%= t('access.resent_invitation') %></h1>
+    <p>
+      <%= t('help.access_invitation') %>
+    </p>
+    <p id="invitation"></p>
+<% end %>
+
+<h1><%= @company.name %> - <%= @access.user_full_name %></h1>
+
+<%= render 'form' %>
+

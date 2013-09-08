@@ -1,0 +1,15 @@
+<% content_for :sidebar do %>
+    <%= link_back :back %>
+    <div id="sidebar_container">
+      <%= render "sidebar_show" %>
+    </div>
+<% end %>
+
+<%= page_title @timetrack.activity %>
+<%= page_head %>
+<%= page_body @timetrack.body %>
+
+<div id="timetracks_container">
+  <%= render "timetracks/timetracks_container", :timetracks => @timetrack.brothers, :counter => @timetrack.brothers.count %>
+</div>
+

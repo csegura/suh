@@ -1,0 +1,5 @@
+$('#comments').prepend("<%= ejs(render(@comment)) %>");
+$("#comment_<%= @comment.id %>").addClass("added").show("slow");
+$("#comments_counter").html("<%= @counter %>");
+flash_messages('<%= raw flash.to_json %>');
+after_create("new_comment");

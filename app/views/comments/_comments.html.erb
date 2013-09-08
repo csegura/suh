@@ -1,0 +1,12 @@
+<h4>
+  <span class="counter" id="comments_counter"><%= counter %></span>
+  <%= t('comment.title') %>
+</h4>
+
+<div class="comments" id="comments">
+  <% if counter > 0 %>
+      <%= render comments -%>
+  <% else %>
+      <p class="no_data"><%= t('comment.no_data') %></p>
+  <% end %>
+</div>

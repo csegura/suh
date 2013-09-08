@@ -1,0 +1,13 @@
+<%= avatar_for @timetrack.access.user %>
+<%= head_label :by, nice_access(@timetrack.access, :company => true) %>
+<%= head_label :status, timetrack_status(@timetrack) %>
+<%= head_label :created_at, nice_date(@timetrack.created_at,:nice,:time_ago => true) %>
+<%= head_label :tracked_at, nice_date(@timetrack.tracked_at,:nice,:time_ago => true) %>
+
+<% if @timetrack.confirmed %>
+    <%= head_label :confirmed_at, nice_date(@timetrack.confirmed_at,:nice,:time_ago => true) %>
+    <%= head_label :confirmed_by, nice_access(@timetrack.confirmed_by_access) %>
+<% end %>
+
+<%= head_label :time, timetrack_hours(@timetrack) %>
+<%= head_label :linked, link_to_resource(@timetrack.trackable) if @timetrack.trackable  %>

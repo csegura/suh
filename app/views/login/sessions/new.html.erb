@@ -1,0 +1,29 @@
+<div class="loginbox">
+  <h1><%= t('session.session_new_title',:name => @name) %></h1>
+
+  <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, :id => "flash", :class => "flash_#{name}" %>
+  <% end %>
+
+  <%= form_tag log_in_path do %>
+      <p>
+        <%= label_tag t('session.email') %><br/>
+        <%= text_field_tag :email, params[:email] %>
+      </p>
+
+      <p>
+        <%= label_tag t('session.password') %><br/>
+        <%= password_field_tag :password %>
+      </p>
+
+      <p class="button"><%= submit_tag t('session.login'), :class=>"button" %></p>
+
+      <p>
+        <%= check_box_tag :remember_me %> <%= label_tag t('session.remember') %>
+      </p>
+  <% end %>
+
+  <div class="extras">
+    <strong><%= t('session.help') %></strong> <%= link_to t('session.forgot_password'), forgot_path  %>
+  </div>
+</div>

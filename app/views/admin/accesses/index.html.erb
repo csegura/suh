@@ -1,0 +1,42 @@
+<% content_for :sidebar do %>
+    <h1><%= t('label.options') %></h1>
+<% end %>
+
+<div class="contextual">
+  <%= link_to t('company.new'), new_admin_company_path %>
+</div>
+<h1><%= t('title.accesses') %></h1>
+
+<p></p>
+
+<% @companies.each do |company| %>
+    <h4>
+      <%= company.name %>
+      <span class="context">
+         <%= link_to t('company.edit'), edit_admin_company_path(company) %> |
+         <%= link_to t('access.new'), new_admin_company_access_path(company.id) %>
+      </span>
+    </h4>
+    <% if company.accesses.blank? %>
+        <% content_for :div, :class => :container do %>
+            <% company.accesses.each do |access| %>
+                <%= content_tag_for(:div, access, :class=>:card) do %>
+                    <div class="user">
+                      <%= avatar_for access.user %>
+                      <%= role_label access %>
+                    </div>
+                    <div class="info">
+                      <h3><%= access.user.full_name %></h3>
+
+                      <p>xxxxxxx<br/>yyyyyyy<br/>zzzzzzz<br/>
+                        <%= link_to t('company.go'), access.company.main_url %> |
+                      </p>
+                    </div>
+                <% end %>
+            <% end %>
+        <% end %>
+    <% else %>
+        <p><%= t('label.nodata') %></p>
+    <% end %>
+<% end %>
+

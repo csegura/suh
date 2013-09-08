@@ -1,0 +1,22 @@
+<div class="nomar nested-fields">
+  <div class="columnl">
+    <%= f.file_field :asset, :class => :nolabel %>
+  </div>
+  <div class="columnr">
+    <%#= f.association :category,
+                      :collection => current_company.categories.all,
+                      :value_method => :name,
+                      :input_html => { :class => :nolabel } %>
+     <%#= f.select :role, Role.all.map { |r| [r.name, r.id, { :class => r.company.id }] }, :include_blank => true %>
+    <%= f.collection_select(:category_id,
+                            current_company.categories.all,
+                            :id,
+                            :name,
+                            {:prompt => ''},
+                            :class => :nolabel) %>
+  </div>
+  <div class="columno">
+    <%= link_to_remove_association t('action.delete'), f %>
+  </div>
+  <div class="clearfix"></div>
+</div>

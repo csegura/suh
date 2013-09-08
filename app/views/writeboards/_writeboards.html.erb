@@ -1,0 +1,16 @@
+<div id="issues">
+  <%= will_paginate @writeboards, :remote => true %>
+  <table class="und">
+    <tbody>
+    <% group = GroupByDate.new %>
+    <% @writeboards.each do |writeboard| %>
+        <%= date_group group, writeboard.created_at, 3 %>
+        <%= content_tag_for :tr, writeboard do %>
+            <td class="date"><%= nice_date writeboard.created_at, :hour  %></td>
+            <td class="item"><%= link_to writeboard.title, writeboard_path(writeboard) %></td>
+            <td class="name"><%= nice_access writeboard.access %></td>
+        <% end %>
+    <% end %>
+    </tbody>
+  </table>
+</div>

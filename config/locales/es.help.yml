@@ -1,0 +1,13 @@
+es:
+  help:
+    user_profile: "Este es su perfil público de usuario, la información que Ud. publique aquí podrá ser vista por otros usuarios del sistema."
+    user_account: "Estos son los datos de su cuenta de usuario, su dirección de correo con la que accederá al sistema su nombre y apellido y su contraseña. Opcionalmente puede añadir una imagén que ayudará a hacer el uso más intuitivo."
+    new_access: "Está dando acceso a una persona a su extranet, para ello basta con indicar la dirección de correo. Existen dos niveles de acceso, como administrador y como usuario. El acceso como administrador permite a esa persona ver los datos de otros usuarios de la misma empresa; el acceso como usuario permite visualizar solo los datos del usuario."
+    access_activation: "Puede habilitar y deshabilitado el acceso del usuario a su empresa. Un usuario deshabilitado no podrá acceder a su empresa. Todos los datos del usuario permanecerán almacenados."
+    access_delete: "Si elimina el usuario, el usuario no podrá acceder al sistema no podrá ver, introducir o borrar ningún dato del usuario ya que todos los datos del usuario se eliminarán."
+    access_invitation: "Puede volver a enviar una invitación de acceso al usuario con las instrucciones para acceder al sistema."
+    company_delete: "Al eliminar la empresa se eliminarán todos los usuarios y todos los datos de la empresa."
+    company_categories: "Las categorías permiten etiquetar los mensajes y archivos. Estas categorías son comunes para todas las empresas que defina en el sistema."
+  hint:
+    send_invitation: "Si marca esta casilla se enviará un mensaje al usuario con instrucciones para acceder."
+    invitation_text: "Puede complementar la invitación añadiendo un texto personalizado."

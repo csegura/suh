@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Suh</title>
+  <%= stylesheet_link_tag "application", :media => :all %>
+  <%= stylesheet_link_tag "print", :media => :print %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <%= yield :head %>
+</head>
+<body>
+<%= render "shared/nav" %>
+<%= render "shared/header" %>
+<div id="main">
+  <section id="page">
+    <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, :id => "flash", :class => "flash_#{name}" %>
+    <% end %>
+    <%= yield %>
+  </section>
+</div>
+
+<% render "shared/footer" %>
+</body>
+</html>

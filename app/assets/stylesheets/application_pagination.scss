@@ -1,0 +1,26 @@
+section#page
+.pagination {
+  padding: 3px;
+  margin: 3px;
+  font-size: 0.7em;
+  text-align: right;
+  a {
+    padding: 2px 5px 2px 5px;
+    margin: 2px;
+    border: 1px solid #EEE;
+    text-decoration: none;
+    &:hover, &:active {
+      border: 1px solid #999;
+       } }
+  em {
+    padding: 2px 5px 2px 5px;
+    margin: 2px;
+    xborder: 1px solid #036CB4;
+    font-weight: bold;
+    background-color: #E6F4FD;
+    color: #999; }
+  .disabled {
+    padding: 2px 5px 2px 5px;
+    margin: 2px;
+    border: 1px solid #EEE;
+    color: #DDD; } }

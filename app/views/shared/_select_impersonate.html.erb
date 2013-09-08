@@ -1,0 +1,47 @@
+<% content_for :head do %>
+    <script>
+        $(document).ready(function () {
+            update_select("issue_access_id",
+                    "/ajax/accesses_in_company/",
+                    $('select#issue_company_id :selected').val(),
+                    false);
+
+            show_optional_form_div("#impersonate_optional", "#impersonate", true, true);
+
+            $("#issue_company_id").change(function () {
+                update_select("issue_access_id",
+                        "/ajax/accesses_in_company/",
+                        $('select#issue_company_id :selected').val(),
+                        false);
+                return false;
+            });
+        });
+    </script>
+<% end %>
+
+
+<div class="nomar nested-fields">
+  <div class="columnlno">
+    <h1>
+      <%= t('company.title') %>
+    </h1>
+    <%= f.input_field :company_id,
+                      :collection => current_company.companies.map { |c| [c.name, c.id] },
+                      :selected => 1,
+                      :class => :nolabel %>
+  </div>
+  <div class="columnr">
+    <h1><%= t('label.user') %></h1>
+    <%= check_box_tag 'impersonate', 'yes', true %>
+  </div>
+  <div id="impersonate_optional" class="columnra">
+    <h1>
+      <%= t('user.title') %>
+    </h1>
+    <%= f.input_field :access_id,
+                      :collection => [],
+                      :selected => 1,
+                      :class => :nolabel %>
+  </div>
+  <div class="clearfix"></div>
+</div>

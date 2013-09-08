@@ -1,0 +1,16 @@
+<h2>
+  <%= t('label.filter_activity') %>
+</h2>
+<ul>
+  <li>
+    <%= link_filter t('label.all'), :activity => nil, :page => 1, :default => true %>
+  </li>
+  <% Activity::ASSETS.collect do |asset, translated| %>
+      <li>
+        <%#= link_to translated.capitalize,
+                    params.merge(:activity => asset, :page=>1), :remote => true %>
+        <%#= link_to_function translated.capitalize, "filter_call({activity:'#{asset}',page:1})" %>
+        <%= link_filter translated.capitalize, :activity => asset, :page => 1 %>
+      </li>
+  <% end %>
+</ul>

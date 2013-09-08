@@ -1,0 +1,16 @@
+<% if documents.length > 0 %>
+    <div class="documents_container">
+      <table class="und">
+        <tbody>
+        <% documents.each do |document| %>
+            <%= content_tag_for :tr, document do %>
+                <td class="what"><%= document_icon document, :preview => true %></td>
+                <td class="item"><%= link_to document.asset_file_name, document_path(document) %></td>
+                <td class="size"><%= nice_size document.asset_file_size %></td>
+                <td class="icon"><%= link_download_document document %></td>
+            <% end %>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+<% end %>

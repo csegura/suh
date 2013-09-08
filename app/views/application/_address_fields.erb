@@ -1,0 +1,17 @@
+<div class="nomar nested-fields">
+  <%= f.input :name %>
+  <%= f.input :line1 %>
+  <%= f.input :line2 %>
+  <div class="columnl">
+    <%= f.input :city, :input_html => {:maxlength => 20, :size => 20} %>
+    <%= f.input :state, :input_html => {:maxlength => 20, :size => 20} %>
+  </div>
+  <div class="columnr">
+    <%= f.input :code, :input_html => {:maxlength => 10, :size => 10} %>
+    <%= f.input :country %>
+  </div>
+  <div class="columno">
+    <%= link_to_remove_association t('action.delete'), f %>
+  </div>
+  <div class="clearfix"></div>
+</div>

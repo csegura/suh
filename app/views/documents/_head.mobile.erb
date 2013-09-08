@@ -1,0 +1,7 @@
+<%= document_icon @document, :format => :medium, :preview => true, :class => :thumb %>
+<%= head_label :by, nice_access(@document.access, :company => true) %>
+<%= head_label :uploaded_at, nice_date(@document.created_at,:nice) %>
+<%= head_label :nolabel, nice_time_ago(@document.created_at) %>
+<%= head_label :size, nice_size(@document.file_size) %>
+<%= head_label :linked, link_to_resource(@document.attachable) if @document.attachable  %>
+<%= head_label :category, nice_category(@document.category) %>

@@ -1,0 +1,19 @@
+<p>
+</p>
+<%= simple_form_for @issue do |f| %>
+    <%= f.error_notification %>
+
+    <div class="inputs">
+
+      <%= select_access_id f %>
+
+      <%= title 1, t('label.title') %>
+      <%= f.input_field :title, :class => :title %>
+      <%= title 1, t('label.description') %>
+      <%= f.input_field :body, :class => :editor, :rows => 10 %>
+
+      <%= render "application/sub_documents", :f => f %>
+
+      <%= submit_or_cancel f, :back, :class => :full %>
+    </div>
+<% end %>

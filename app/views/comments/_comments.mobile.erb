@@ -1,0 +1,14 @@
+<ul data-role="listview" data-theme="b">
+  <li>
+    <h3><%= t('comment.title') %></h3>
+    <span id="comments_counter" class="ui-li-count"><%= counter %></span>
+  </li>
+</ul>
+
+<div class="comments" id="comments">
+  <% if counter > 0 %>
+      <%= render comments -%>
+  <% else %>
+      <p class="no_data"><%= t('comment.no_data') %></p>
+  <% end %>
+</div>

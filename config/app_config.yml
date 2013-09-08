@@ -1,0 +1,28 @@
+common: #&common
+  inspectimage_ct: "--- \n- image/jpeg\n- image/pjpeg\n- image/png\n- image/x-png\n- image/gif\n"
+  image_content_type: "image/jpeg,image/pjpeg,image/png,image/x-png,image/gif"
+  main_protocol: "http://"
+  main_name: "dodocu.net"
+  mail_from: "mailer@dodocu.net"
+  main_subdomain: "www"
+  delayed_mail: true
+  app_name: "IngeniOS Development"
+
+production:
+  #<<: *common
+  main_web: "http://www.dodocu.net"
+  main_domain: "dodocu.net"
+  domain_name: "dodocu.net"
+
+development:
+  #<<: *common
+  main_web: "http://www.demo.local:3000"
+  main_domain: "demo.local:3000"
+  domain_name: "demo.local"
+
+test:
+  #<<: *common
+  delayed_mail: false
+  main_web: "http://www.demo.local:3000"
+  main_domain: "demo.local:3000"
+  domain_name: "demo.local"

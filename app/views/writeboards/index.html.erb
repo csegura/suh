@@ -1,0 +1,11 @@
+<% content_for :sidebar do %>
+    <h1><%= t('writeboard.title') %></h1>
+    <p>
+    <%= link_to t('writeboard.new'), new_writeboard_path %>
+    </p>
+    <%= render "filters" %>
+<% end %>
+
+<h1><%= t('writeboard.title') %></h1>
+
+<%= render "writeboards" %>

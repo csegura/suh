@@ -1,0 +1,16 @@
+<% content_for :sidebar do %>
+    <%= link_back :back %>
+    <div id="sidebar_container">
+      <%= render "sidebar_show" %>
+    </div>
+<% end %>
+
+<%= page_title @document.asset_file_name %>
+<%= page_head %>
+<%= page_body @document.comment %>
+
+<%= render "comments/form", :object => @document %>
+
+<div id="comments_container">
+<%= render "comments/comments", :comments => @comments, :counter => @comments_count %>
+</div>

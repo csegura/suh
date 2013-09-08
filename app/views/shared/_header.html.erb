@@ -1,0 +1,19 @@
+<header>
+  <h1><%= current_company.name %></h1>
+  <h2></h2>
+  <%= render "shared/user_session" %>
+  <div id="tabs">
+    <ul>
+      <%= link_tab t('tabs.dashboard'), root_path, :id => :unread_count %>
+      <%= link_tab t('tabs.issues'), issues_path, :start => true  %>
+      <%= link_tab t('tabs.documents'), documents_path, :start => true  %>
+      <%= link_tab t('tabs.timetracks'), timetracks_path, :start => true  %>
+      <%= link_tab t('tabs.writeboards'), writeboards_path, :start => true  %>
+
+      <% if current_access.is_owner? %>
+        <%= link_tab t('tabs.admin'), admin_path, :right => true, :start => true %>
+      <% end %>
+    </ul>
+    <%#= render "search" %>
+  </div>
+</header>

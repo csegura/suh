@@ -1,0 +1,39 @@
+<%= simple_form_for(@company) do |f| %>
+    <%= f.error_notification %>
+
+    <div class="inputs">
+      <h1>Información basica</h1>
+      <%= f.input :name, :hint => "nombre de la empresa" %>
+
+      <!--<h2>Otra información</h2>-->
+      <!--<%= f.simple_fields_for :address do |p| %>-->
+          <!--<%= p.input :line1 %>-->
+          <!--<%= p.input :line2 %>-->
+          <!--<%= p.input :city, :input_html => {:maxlength => 20} %>-->
+          <!--<%= p.input :state, :input_html => {:maxlength => 20} %>-->
+          <!--<%= p.input :code %>-->
+          <!--
+      <% end %>-->
+
+      <h2>Direcciones</h2>
+
+      <div class="s_hide">
+        <p>Sample</p>
+      </div>
+
+      <h2>Direcciones</h2>
+
+      <div class="s_hide">
+        <div id="addresses">
+          <%= f.simple_fields_for :addresses do |p| %>
+              <%= render 'address_fields', :f => p %>
+          <% end %>
+          <%= link_to_add_association 'add address', f, :addresses %>
+        </div>
+      </div>
+
+      <div class="actions">
+        <%= f.button :submit %>
+      </div>
+    </div>
+<% end %>

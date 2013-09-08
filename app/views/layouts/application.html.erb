@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%=h yield(:title) %></title>
+  <%= stylesheet_link_tag "application", :media => :all %>
+  <%= stylesheet_link_tag "print", :media => :print %>
+  <%= javascript_include_tag :application %>
+  <%= javascript_include_tag :cocoon %>
+  <%#= stylesheet_link_tag :wysiwyg %>
+  <!-- <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js'></script> -->
+  <%= csrf_meta_tags %>
+  <%= yield :head %>
+</head>
+<body>
+<%#= render "shared/nav" %>
+<%= render "shared/header" %>
+<div id="main">
+  <section id="sidebar">
+    <%= yield :sidebar %>
+  </section>
+
+  <section id="page">
+    <%= yield %>
+  </section>
+</div>
+<%= render "shared/footer" %>
+<%= render "shared/notifications" %>
+</body>
+</html>

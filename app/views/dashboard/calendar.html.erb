@@ -1,0 +1,27 @@
+<% content_for :head do %>
+    <%= javascript_include_tag "/assets/fullcalendar.min.js" %>
+    <%= stylesheet_link_tag "/assets/fullcalendar.css" %>
+<% end %>
+
+<% content_for :sidebar do %>
+    <h1><%= t('issue.title') %></h1>
+    <p>
+    <%= link_to t('issue.new'), new_issue_path %>
+    </p>
+    <%= render "filters" %>
+<% end %>
+
+<h1><%= t('activity.title') %></h1>
+
+<section id="page_container">
+    <div id="calendar"></div>
+</section>
+
+<% content_for :head do %>
+  <%= javascript_tag do %>
+  $(document).ready(function(){
+    var calendar_src =  window.location.href;
+    acts_as_view_calendar("#calendar", calendar_src);
+  });
+  <% end %>
+<% end %>

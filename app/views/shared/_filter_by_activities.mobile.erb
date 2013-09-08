@@ -1,0 +1,4 @@
+<%= select :filter,
+           :activity,
+           Activity::ASSETS.collect {|c| [c[1], c[0]]},
+           {:prompt => t('label.all')} %>

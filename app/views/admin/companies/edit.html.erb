@@ -1,0 +1,17 @@
+<% content_for :sidebar do %>
+    <%= link_back admin_path %>
+    <p></p>
+
+    <div class="contextual" >
+      <%= link_to t('label.delete'), admin_company_path(@company.id),
+                  :confirm => t('label.sure'), :method => :delete %>
+    </div>
+    <h1><%= t('company.delete') %></h1>
+    <p>
+      <%= t('help.company_delete') %>
+    </p>
+<% end %>
+
+<h1><%= t('company.edit') %> - <%= @company.name %></h1>
+
+<%= render 'form' %>

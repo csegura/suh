@@ -1,0 +1,5 @@
+<div id="notify" class="notify-top">
+  <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, :id => "flash", :class => "notify-content flash_#{name}" %>
+  <% end %>
+</div>

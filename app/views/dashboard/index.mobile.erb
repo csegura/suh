@@ -1,0 +1,17 @@
+<div data-role="header">
+  <h1><%= current_company.name %> </h1>
+  <a href="../../" data-icon="home" data-iconpos="notext" data-direction="reverse" class="ui-btn-right jqm-home">Home</a>
+</div>
+
+<div data-role="content">
+  <div class="content-primary">
+    <ul data-role="listview" data-split-theme="d" id="page_1">
+      <li data-role="list-divider" role="heading"><%= t('view.labels.recent_activity') %></li>
+      <%= render "activities/activities" %>
+    </ul>
+  </div>
+</div>
+
+<div data-role="footer" class="ui-bar" data-position="fixed">
+  <%= render "shared/filter_by_activities" %>
+</div>

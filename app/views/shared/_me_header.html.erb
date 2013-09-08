@@ -1,0 +1,11 @@
+<header>
+  <h1><%= current_user.full_name %></h1>
+  <h2></h2>
+  <%= render "shared/me_user_session" %>
+   <div id="tabs">
+    <ul>
+      <%= link_tab "me", me_path %>
+    </ul>
+    <%#= render "search" %>
+  </div>
+</header>

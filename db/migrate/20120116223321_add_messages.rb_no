@@ -1,0 +1,16 @@
+class AddMessages < ActiveRecord::Migration
+  def up
+    create_table :messages do |t|
+      t.integer :access_id
+      t.integer :company_id
+      t.text    :body
+      t.timestamp
+    end
+    add_index "messages", ["access_id"], :name => "index_messages_on_access_id"
+    add_index "messages", ["company_id"], :name => "index_messages_on_company_id"
+  end
+
+  def down
+    drop_table :messages
+  end
+end

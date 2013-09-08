@@ -1,0 +1,5 @@
+<ul id="session">
+  <li class="user"><span><%= nice_user current_user %></span></li>
+  <li><%= link_to t("session.my_account"), me_path %></li>
+  <li><%= link_to t("session.logout"), log_out_path %></li>
+</ul>

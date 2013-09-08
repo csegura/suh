@@ -1,0 +1,25 @@
+<%= simple_form_for [@user], :url => me_account_path, :html => { :multipart => true } do |f| %>
+  <%= f.error_notification %>
+
+  <div class="inputs">
+
+    <h1><%= t('title.main_data') %></h1>
+    <%= f.input :email %>
+    <%= f.input :first_name %>
+    <%= f.input :last_name %>
+
+    <h1><%= t('labels.password') %></h1>
+    <%= f.input :password, :input_html => { :size => 20 } %>
+    <%= f.input :password_confirmation, :input_html => { :size => 20 } %>
+
+    <h1><%= t('labels.avatar') %></h1>
+    <p class="avatar"><%= avatar_for @user %></p>
+    <%= f.simple_fields_for :avatar do |lf| %>
+      <%= lf.input :image, :as => :file %>
+    <% end %>
+    <p class="separator"> </p>
+
+  </div>
+
+  <%= submit_or_cancel f, me_path  %>
+<% end %>

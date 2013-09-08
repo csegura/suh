@@ -1,0 +1,5 @@
+<%= content_tag_for :li, category do %>
+  <span class="handle"> </span>
+  <%= editable_field category, :name %>
+  <%= link_to_delete admin_category_path(category) %>
+<% end %>

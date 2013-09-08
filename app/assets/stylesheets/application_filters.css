@@ -1,0 +1,29 @@
+div#filters select {
+  width: 100%;
+  font-size: 1em;
+  padding: 2px;
+}
+
+div#filters a.filter_on,
+div#filters a:hover.filter_on {
+  border-radius: 5px 5px 5px 5px;
+  background-color: #00609a;
+  color: #FFF;
+  display: block;
+  margin-left: -5px;
+  padding-left: 10px;
+  text-decoration: none;
+}
+
+div#filters a {
+  color: #00609a;
+}
+
+div#filters a:hover {
+  text-decoration: underline;
+}
+
+div#filters a.red {
+  color: #ff0000;
+}
+

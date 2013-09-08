@@ -1,0 +1,20 @@
+<%= simple_form_for [:admin, @company] do |f| %>
+    <%= f.error_notification %>
+
+    <div class="inputs">
+      <h1><%= t('label.main_data') %></h1>
+      <%= f.input :name, :hint => t('hint.company_name') %>
+
+      <h1><%= t('label.logo') %></h1>
+
+      <p class="avatar"><%= avatar_for @company %></p>
+      <%= f.simple_fields_for :avatar do |lf| %>
+          <%= lf.input :image, :as => :file %>
+      <% end %>
+
+      <%= render 'application/addresses_and_phones', :f => f %>
+
+      <%= submit_or_cancel f, admin_path %>
+
+    </div>
+<% end %>

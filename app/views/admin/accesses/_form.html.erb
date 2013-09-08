@@ -1,0 +1,25 @@
+<p>
+</p>
+<%= simple_form_for [:admin, @company, @access] do |f| %>
+    <%= f.error_notification %>
+
+    <div class="inputs">
+      <h1><%= t('title.main_data') %></h1>
+
+      <%= f.input :email %>
+      <%= f.input :first_name %>
+      <%= f.input :last_name %>
+
+
+      <h1><%= t('title.roles') %></h1>
+      <%= f.input :roles,
+                  :collection => {t('role.user') => :user, t('role.admin') => :user_admin},
+                  :selected => @access.roles %>
+
+      <%= render_if :new, "invitation", :f => f %>
+
+      <%= render 'application/addresses_and_phones', :f => f %>
+
+      <%= submit_or_cancel f, admin_path %>
+    </div>
+<% end %>

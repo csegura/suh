@@ -1,0 +1,36 @@
+<div class="loginbox">
+  <h1>
+  <% if @user.password_digest.blank? %>
+    <%= t('session.password_first') %>
+  <% else %>
+    <%= t('session.password_new') %>
+  <% end %>
+  </h1>
+  <%= form_for @user, :url => log_edit_path(params[:id]) do |f| %>
+
+      <% flash.each do |name, msg| %>
+          <%= content_tag :div, msg, :id => "flash", :class => "flash_#{name}" %>
+      <% end %>
+
+    <% if @user.errors.any? %>
+      <div class="error_messages">
+        <h2>Form is invalid</h2>
+        <ul>
+          <% for message in @user.errors.full_messages %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+    </div>
+    <div class="field">
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation %>
+    </div>
+    <div class="actions"><%= f.submit t("session.update_password") %></div>
+  <% end %>
+</div>

@@ -1,0 +1,39 @@
+<% content_for :sidebar do %>
+    <%= link_back admin_path %>
+    <p></p>
+    <h1><%= t('category.title').pluralize %></h1>
+    <p>
+      <%= t('help.company_categories') %>
+    </p>
+<% end %>
+
+<h1><%= t('category.title') %> - <%= current_company.name %></h1>
+
+<p>
+  <%= simple_form_for [:admin, @category], :remote => true do |f| %>
+    <div class="inputs">
+      <%= f.input :name %>
+    </div>
+    <%= submit_or_cancel f, admin_path %>
+  <% end %>
+</p>
+
+<!-- TODO: message when there is only one category -->
+<% if @categories.nil? %>
+    <p><%= t('category.no_data') %></p>
+<% else %>
+    <h4><%= t('category.title').pluralize %></h4>
+    <ul class="categories" id="categories">
+      <%= render :partial => "category", :collection => @categories %>
+    </ul>
+<% end %>
+
+<!-- TODO: move -->
+<% content_for :head do %>
+  <%= javascript_tag do %>
+  $(document).ready(function(){
+    acts_as_sortable('#categories', '<%= sort_admin_categories_path %>');
+    acts_as_editable('.editable','<%= rename_admin_categories_path %>');
+  });
+  <% end %>
+<% end %>

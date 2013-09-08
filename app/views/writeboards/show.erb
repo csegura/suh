@@ -1,0 +1,9 @@
+<% content_for :sidebar do %>
+    <%= link_back :back %>
+    <div id="sidebar_container">
+      <%= render "sidebar_show" %>
+    </div>
+<% end %>
+
+<%= page_title @current_version.title %>
+<%= page_body @current_version.body %>

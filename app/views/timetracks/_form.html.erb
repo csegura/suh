@@ -1,0 +1,21 @@
+<div id="new_timetrack_form" class="hidden_form">
+  <h4>
+    <%= t('timetrack.new') %>
+  </h4>
+
+  <%= simple_form_for [object, Timetrack.new], :remote => true do |f| %>
+      <%= f.error_notification %>
+
+      <div class="inputs">
+        <%= f.input :tracked_at %>
+        <%= f.input :billable %>
+        <%= f.input :minutes, :input_html => {:size => 10, :maxlength => 15} %>
+
+        <%= f.input_field :body, :class => "editor_full", :rows => 8 %>
+
+      </div>
+
+      <%= submit_or_cancel f, "new_timetrack_form", :class => :full %>
+
+  <% end %>
+</div>

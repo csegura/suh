@@ -1,0 +1,27 @@
+<p>
+</p>
+<%= simple_form_for @document do |f| %>
+    <%= f.error_notification %>
+
+    <div class="inputs">
+
+      <%= select_access_id f %>
+
+      <h1>Archivo</h1>
+      <%= f.file_field :asset, :class => :nolabel %>
+      <h1>Categoria</h1>
+
+      <%= collection_select(:document,
+                            :category_id,
+                            current_company.categories.all,
+                            :id,
+                            :name,
+                            {:prompt => ''},
+                            :class => :nolabel) %>
+      <h1>Descripcion</h1>
+      <%= f.input_field :comment, :class => :editor %>
+
+
+      <%= submit_or_cancel f, :back, :class => :full %>
+    </div>
+<% end %>

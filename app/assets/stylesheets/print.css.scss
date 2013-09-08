@@ -1,0 +1,19 @@
+@media print {
+    body { background:white; color:black; margin:0 }
+    nav { display: none; }
+    header { display:none; }
+    section#sidebar { display: none; }
+    section#page {
+        border: none;
+        border-radius: 0px;
+        box-shadow: 0px;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        -o-box-shadow: none;
+        margin-left: 0px;
+        float: none;
+        width: auto; }
+    .contextual { display: none; }
+    section#sidebar + section#page { width:100%; }
+    footer { display: none; }
+}

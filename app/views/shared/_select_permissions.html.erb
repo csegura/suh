@@ -1,0 +1,41 @@
+<% content_for :head do %>
+  <script>
+    $(document).ready(function () {
+      update_select("issue_access_id",
+              "/ajax/accesses_in_company/",
+              $('select#issue_company_id :selected').val(),
+              false);
+
+      hide_optional_form_div("#company_permissions", "#writeboard_public_access", true, false);
+    });
+  </script>
+<% end %>
+
+
+<div class="nomar nested-fields">
+  <div class="columnlno">
+    <h1>
+      <%= t('label.public') %>
+    </h1>
+    <%= f.input :public_access %>
+  </div>
+  <div id="company_permissions">
+    <div  class="columnra">
+      <h1>
+        <%= t('company.title') %>
+      </h1>
+      <%= f.input_field :company_id,
+                        :collection => current_company.companies.map { |c| [c.name, c.id] },
+                        :selected => 1,
+                        :class => :nolabel %>
+    </div>
+    <div class="columnra">
+      <h1>
+        <%= t('label.permissions') %>
+      </h1>
+      <%= f.input :editable_admins %> <br/>
+      <%= f.input :editable_users %>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+</div>

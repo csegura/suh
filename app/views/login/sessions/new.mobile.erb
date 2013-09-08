@@ -1,0 +1,25 @@
+<header data-role="header">
+  <h1><%#= current_main_company.name %> </h1>
+</header>
+
+<div data-role="content">
+    <%= form_tag log_in_path do %>
+      <div data-role="fieldcontain">
+        <%= label_tag :email %> <%= text_field_tag :email, params[:email] %><br/>
+        <%= label_tag :password %> <%= password_field_tag :password %><br/>
+
+        <fieldset data-role="controlgroup" data-role="fieldcontain">
+            <%= check_box_tag :remember_me %> <%= label_tag :remember_me, t('login.remember') %>
+        </fieldset>
+
+        <%= submit_tag t('session.login'), :class=>"button" %>
+      </div>
+    <% end %>
+</div>
+
+<div data-role="footer" data-position="fixed" class="ui-bar">
+    <% flash.each do |name, msg| %>
+      <%= msg %>
+    <% end %>
+    <%= link_to t('session.forgot_password'), forgot_path, :class => "ui-btn-right"  %>
+</div>

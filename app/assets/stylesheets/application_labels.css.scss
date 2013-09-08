@@ -1,0 +1,210 @@
+// table column helpers
+table.und td {
+  &.what {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 4px;
+    text-align: right; }
+  &.item {
+    color: #000;
+    font-size: 12px;
+    line-height: 1.1em;
+    padding-left: 6px;
+    padding-top: 7px;
+    width: 100%;
+    margin: 0 0 2px; }
+  &.action {
+    color: #999;
+    font-size: 10px;
+    padding-top: 7px;
+    text-align: right;
+    white-space: nowrap; }
+  &.name, &.date {
+    color: #222;
+    font-size: 0.8em;
+    text-align: right;
+    padding-top: 7px;
+    white-space: nowrap; }
+  &.size {
+    color: #222;
+    font-size: 0.8em;
+    text-align: right;
+    padding-top: 7px;
+    white-space: nowrap;
+  }
+  &.what span {
+    margin: 0;
+    color: #FFF;
+    display: block;
+    float: right;
+    font-size: 10px;
+    white-space: nowrap;
+    //width: 60px;
+    padding: 3px 3px; } }
+
+
+span.right {
+    float: right;
+}
+
+// span
+span.file {
+    background-color: #2288AA;
+}
+span.activity_issue {
+    background-color: #616382;
+}
+span.activity_comment {
+    background-color: #99cc00;
+}
+span.activity_document {
+    background-color: #2288AA;
+}
+
+span.timetrack {
+    font-size: 0.8em;
+    background-color: #66cc00;
+    color: #fff;
+    padding: 2px;
+    width: 50px;
+    text-align: right;
+    display: inline-block;
+}
+
+span.timetrack_confirmed {
+  color: #99cc00;
+}
+
+span.timetrack_unconfirmed {
+  color: #990000;
+}
+
+span.time_ago {
+    font-size: 0.9em;
+    color: #999;
+}
+
+div.role {
+    color: #fff;
+    font-size: 9px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    float: left;
+    width: 100%;
+    &.role_user {
+        background-color: #E6F1F7;
+        color: #777;
+    }
+    &.role_admin {
+
+    }
+    &.role_owner {
+        background-color: #008000;
+        color: #fff;
+    }
+}
+
+.resalted {
+    background-color: #669900;
+    color: #fff;
+    text-align: center;
+}
+
+.no_data {
+    background-color: #fff;
+    color: #006666;
+}
+
+span.issue_open {
+    font-size: 0.9em;
+    background-color: #990000;
+    color: #fff;
+    padding: 2px;
+}
+
+span.issue_close {
+    font-size: 0.9em;
+    background-color: #66cc00;
+    color: #fff;
+    padding: 2px;
+}
+
+span.counter {
+    font-size: 0.9em;
+    float: right;
+    padding-right: 5px;
+}   
+
+span.counter {
+    //background: -moz-linear-gradient(center top , #E35E5E, #911919) repeat scroll 0 0 transparent;
+    background-color: #6e6e6e;
+    border-radius: 10px 10px 10px 10px;
+    color: #FFFFFF !important;
+    display: inline-block;
+    font-size: 10px;
+    font-weight: bold;
+    height: 13px;
+    line-height: 13px !important;
+    margin-right: 5px;
+    padding: 0 4px;
+    text-shadow: 0 0 0 #222222;
+}
+
+span.unread_count {
+    background-color: #CC0000;
+    border-color: #FFFFFF;
+    border-radius: 10px 10px 10px 10px;
+    border-style: solid;
+    border-width: 2px;
+    color: #FFFFFF !important;
+    display: block;
+    float: none;
+    font-size: 10px;
+    font-weight: bold;
+    height: 13px;
+    left: 10px;
+    line-height: 13px !important;
+    margin-right: 5px;
+    padding: 2px 4px;
+    position: absolute;
+    text-shadow: 0 0 0 #222222;
+    top: 35px;
+}
+
+section#page a.download {
+    background: url(icons/disk16.png) no-repeat scroll right center white;
+    width: 16px;
+    height: 16px;
+    display: block;
+    &:hover {
+      background: url(icons/disk16.png) no-repeat scroll right center white;
+    }
+}
+
+a.red {
+   color: #FF0000;
+   &:hover {
+    text-decoration: underline;
+   }
+}
+a.green {
+  color: #669900;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.negative {
+  font-size: 0.9em;
+  background-color: #990000;
+  color: #fff;
+  padding: 2px;
+}
+
+.positive {
+  font-size: 0.9em;
+  background-color: #66cc00;
+  color: #fff;
+  padding: 2px;
+}

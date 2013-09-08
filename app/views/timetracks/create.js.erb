@@ -1,0 +1,6 @@
+$('#timetracks').prepend("<%= ejs(render(@timetrack)) %>");
+$("#timetrack_<%= @timetrack.id %>").addClass("added").show("slow");
+$("#timetrack_counter").html("<%= @counter %>");
+flash_messages('<%= raw flash.to_json %>');
+$("#new_timetrack_form").replaceWith("<%= ejs(render("form",:object => @timetrack.trackable)) %>");
+after_create("new_timetrack");

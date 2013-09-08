@@ -1,0 +1,15 @@
+<%= will_paginate @timetracks, :remote => true %>
+<table class="und">
+  <tbody>
+  <% group = GroupByDate.new %>
+  <% @timetracks.each do |timetrack| %>
+      <%= date_group group, timetrack.created_at, 5 %>
+      <%= content_tag_for :tr, timetrack do %>
+          <td class=""><%= timetrack_flags timetrack %></td>
+          <td class="what"><%= timetrack_hours timetrack %></td>
+          <td class="item"><%= timetrack_link timetrack %></td>
+          <td class="name"><%= nice_access timetrack.access %></td>
+      <% end %>
+  <% end %>
+  </tbody>
+</table>

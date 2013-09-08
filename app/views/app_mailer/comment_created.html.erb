@@ -1,0 +1,21 @@
+<div class="details">
+  <h5 class="comment">
+    <%= @comment.access_full_name %>
+    <span class='date'>
+    <%= nice_time_ago @comment.created_at %> -
+      <%= nice_date @comment.created_at %>
+  </span>
+  </h5>
+  <p>
+    <%= nice_text @comment.comment %>
+  </p>
+  <p>
+    <%= link_to_resource @comment %>
+  </p>
+</div>
+<div class="details">
+  <%= render "issue_details", :issue => @commentable %>
+</div>
+
+
+

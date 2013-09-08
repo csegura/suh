@@ -1,0 +1,10 @@
+es:
+  activerecord:
+    errors:
+      messages:
+        taken: "ya existe"
+      models:
+        user:
+          attributes:
+            email:
+              taken: "ya existe"

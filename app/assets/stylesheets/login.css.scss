@@ -1,0 +1,106 @@
+body.login {
+    background-color: #E5E5E5;
+    color: #000000;
+    padding: 55px 0;
+
+    div.login {
+    -moz-border-radius: 10px 10px 10px 10px;
+    -moz-box-shadow: 0 0 6px #999999;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #AAAAAA;
+    font-family: lucida grande,verdana,serif;
+    font-size: 12px;
+    margin: 10px auto;
+    padding: 25px 28px;
+    text-align: left;
+    width: 410px;
+}
+
+h1 {
+    color: #000000;
+    font-size: 16px;
+    margin: 0 0 20px;
+    padding: 0;
+		font-weight: bold;
+}
+
+input.button {
+    font-size: 14px;
+    margin: 10px 0 0;
+    padding: 3px;
+    width: auto;
+}
+
+input {
+    font-size: 14px;
+    margin-bottom: 10px;
+    padding: 3px;
+    width: 275px;
+    display: block;
+}
+
+input[type='checkbox'] {
+	width: 10px;
+    display: inline;
+}
+
+label {
+    font-family: "Lucida Grande",arial,sans-serif;
+    font-size: 14px;
+    margin: 20px 0 5px 0;
+    padding: 0;
+    text-align: left;
+    font-weight: bold;
+}
+.extras {
+    border-top: 1px dashed #CCCCCC;
+    margin-top: 15px;
+    padding-top: 10px;
+}
+
+span.error {
+    color: #FF3333;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.error_notification {
+    border: 1px solid;
+    padding: 4px;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+    background: #D8000C;
+}
+
+.hint {
+    clear: left;
+    color: #555555;
+    display: block;
+    font-size: 10px;
+    font-style: italic;
+    width: 320px;
+}
+
+#flash {
+    border: 1px solid #CCCCCC;
+    font-size: 14px;
+    margin-bottom: 12px;
+    padding: 5px 5px 5px 30px;
+    text-align: center;
+}
+
+.flash_notice {
+    background-color: #E2F9E3;
+    border-color: #99CC99;
+    color: #006600;
+}
+
+.flash_alert {
+    background-color: #CC0000;
+    border-color: #CC9999;
+    color: #FFFFFF;
+}
+}

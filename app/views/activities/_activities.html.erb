@@ -1,0 +1,19 @@
+<div id="activities">
+  <%= will_paginate @activities, :remote => true %>
+  <table class="und">
+    <tbody>
+    <% group_by_date(@activities, :created_at).each do |date, activities| %>
+        <%= group_header_date date, 5 %>
+        <% activities.each do |activity| %>
+            <%= content_tag_for :tr, activity do %>
+                <td class="what"><%= activity_label activity %></td>
+                <td class="item"><%= activity_purl activity %></td>
+                <td class="action"><%= activity_action activity %></td>
+                <td class="name"><%= nice_access activity.access %></td>
+                <td class="flags"><%= activity_flags activity %></td>
+            <% end %>
+        <% end %>
+    <% end %>
+    </tbody>
+  </table>
+</div>

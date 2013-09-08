@@ -1,0 +1,17 @@
+<div id="documents">
+  <%= will_paginate @documents, :remote => true %>
+  <table class="und">
+    <tbody>
+    <% group = GroupByDate.new %>
+    <% @documents.each do |document| %>
+        <%= date_group group, document.created_at %>
+        <%= content_tag_for :tr, document do %>
+            <td class="what"><%= document_icon document, :preview => true %></td>
+            <td class="date"><%= nice_date document.created_at, :hour  %></td>
+            <td class="item"><%= link_to document.asset_file_name, document_path(document) %></td>
+            <td class="name"><%= nice_access document.access %></td>
+        <% end %>
+    <% end %>
+    </tbody>
+  </table>
+</div>

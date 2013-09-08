@@ -1,0 +1,15 @@
+<%= content_tag_for :div, comment, :class => comment.in_trash? ? "in_trash" : "" do -%>
+  <%= avatar_for comment.access.user %>
+  <div class="indented">
+    <h5>
+      <span class="name"><%= nice_access comment.access  %></span>
+      <%= link_to_delete_auth comment, comment_path(comment) %>
+      <span class="date"><%= nice_date comment.created_at %></span>
+      <span class="date"><%= nice_time_ago comment.created_at %></span>
+    </h5>
+    <p>
+      <%= comment.comment.html_safe %>
+    </p>
+    <%= render "documents/documents_container", :documents => comment.documents %>
+  </div>
+<% end -%>

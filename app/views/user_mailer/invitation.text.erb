@@ -1,0 +1,12 @@
+Hola <%= @user.full_name %>
+
+Binvenido a la extranet de <%= @company.main_company_name %>,
+
+Usamos esta extranet para ayudar a manetener una relación más fluida con vosotros, aquí almacenamos las notas y documentos que tienen que ver con el trabajo que realizamos juntos.
+
+Esto nos permite a ambos mantener un canal abierto las 24 horas, además de  mantener organizada y centralizada la documentación que manejamos juntos.
+
+Puede acceder usando la dirección: <%= log_edit_url(@user.password_reset_token, :subdomain => @company.main_company_subdomain) %>
+
+Un Saludo,
+<%= @company.main_company_name %>
